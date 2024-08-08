@@ -10,7 +10,7 @@
 
     $(".level-btn").on("click",function(e){  //easy medium hard function 
         var audio = new Audio;
-        audio.src="./mouse-click.mp3";
+        audio.src="mouse-click.mp3";
         audio.play();
         difficulty = e.target.attributes[2].value; //getting the value form the click as i hardcode the value in the button as value=400;
 
@@ -43,7 +43,7 @@
                 },difficulty);
 
                 var audio = new Audio();               //playing the audio as according to the song   
-                audio.src="./"+color[random_number]+".mp3";
+                audio.src=color[random_number]+".mp3";
                 audio.play(); 
 
                 gameArray.push(color[random_number]);      //pushing the color in the array 
@@ -55,7 +55,7 @@
                     var userChosenColor = e.target.id;
 
                     var audio = new Audio();
-                    audio.src="./"+userChosenColor+".mp3";
+                    audio.src=userChosenColor+".mp3";
                     audio.play(); 
 
                     $("#"+userChosenColor).addClass("pressed");//adding the special effect
@@ -82,7 +82,7 @@
                 },500);
 
                 var audio = new Audio();
-                audio.src="./wrong.mp3";
+                audio.src="wrong.mp3";
                 audio.play(); 
 
                 $(document).on("keypress",()=>{
